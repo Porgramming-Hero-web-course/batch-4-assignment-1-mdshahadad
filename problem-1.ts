@@ -3,9 +3,10 @@ const sumArray = (num: number[]): number => {
     for (let i: number = 0; i < num.length; i++) {
         sum = sum + num[i];
     }
-    console.log(sum)
     return sum;
 }
 
-const resultCheck1 = sumArray([5, 5, 5, 5]);
-// console.log(resultCheck1);
+const numbers: number[] = [1, 2, 3, 4, 5];
+
+const resultCheck1: number = sumArray(numbers);
+console.log(resultCheck1);
