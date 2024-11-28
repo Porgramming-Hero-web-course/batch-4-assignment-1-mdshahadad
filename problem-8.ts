@@ -7,6 +7,11 @@ const validateKeys = <T extends object>(obj: T, keys: (keyof T)[]) => {
     // console.log(obj, keys);
 }
 
+interface Person {
+    name: string;
+    age: number;
+    email: string;
+}
 
-const person = { name: "Alice", age: 25, email: "alice@example.com" };
+const person: Person = { name: "Alice", age: 25, email: "alice@example.com" };
 console.log(validateKeys(person, ["name", 'email']));
