@@ -9,4 +9,4 @@ const sumArray = (num: number[]): number => {
 const numbers: number[] = [1, 2, 3, 4, 5];
 
 const resultCheck1: number = sumArray(numbers);
-// console.log(resultCheck1);
+console.log(resultCheck1);

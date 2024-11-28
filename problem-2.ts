@@ -17,4 +17,4 @@ const removeDuplicates = (num: number[]): number[] => {
 const arr: number[] = [1, 2, 2, 3, 4, 4, 5, 6, 5, 5, 2];
 
 const newArr: number[] = removeDuplicates(arr);
-// console.log(newArr);
+console.log(newArr);
