@@ -11,11 +11,23 @@ type Rectangle = {
 
 type Shape = Circle | Rectangle;
 
+
+const isCircle = (shape: Shape): shape is Circle => {
+    return shape.shape === 'circle';
+}
+
+const isRectangle = (shape: Shape): shape is Rectangle => {
+    return shape.shape === 'rectangle';
+}
+
+
 const calculateShapeArea = (shape: Shape): number | undefined => {
-    if (shape.shape === 'circle') {
+    if (isCircle(shape)) {
         return 3.1416 * shape.radius * shape.radius;
-    } else if ('width' in shape && 'height' in shape) {
-        return shape.width * shape.height
+
+    } else if (isRectangle(shape)) {
+        return shape.width * shape.height;
+        
     } else {
         console.error('Wrong Input');
     }
